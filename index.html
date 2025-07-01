@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paulo | Portfólio</title>
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- tsParticles CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Fundo de partículas -->
+  <div id="tsparticles"></div>
+
+  <!-- Navegação -->
+  <nav class="navegacao">
+    <ul>
+      <li><a href="#inicio" class="menu-link">Início</a></li>
+      <li><a href="#sobre" class="menu-link">Sobre</a></li>
+      <li><a href="#cursos" class="menu-link">Cursos</a></li>
+      <li><a href="#contato" class="menu-link">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Cabeçalho -->
+  <main id="inicio" class="cabecalho" data-aos="fade-up">
+    <img src="P.jpg" alt="Foto de Paulo Henrique" class="foto-perfil" data-aos="zoom-in">
+    <h1 data-aos="fade-right">Paulo Henrique</h1>
+    <p class="cabecalho-sub-titulo" data-aos="fade-left">Programador iniciante</p>
+  </main>
+
+  <!-- Sobre -->
+  <section id="sobre" class="sobre">
+    <h2 class="sobre-titulo" data-aos="fade-up">Sobre mim</h2>
+    <div class="sobre-caixa">
+      <p class="sobre-paragrafo" data-aos="fade-up" data-aos-delay="200">
+        Sou uma pessoa autônoma, proativa e com facilidade para aprender e executar tarefas de forma independente. Gosto de compartilhar conhecimento, apoiar quem busca crescer e contribuir com o que sei. Tenho perfil de liderança, sei trabalhar em equipe, me comunico bem e estou sempre disposto a ajudar. Acredito que isso me torna alguém inspirador para quem está ao meu redor.
+      </p>
+    </div>
+  </section>
+
+  <!-- Cursos -->
+  <section id="cursos" class="meus-cursos">
+    <h2 class="cursos-titulo" data-aos="fade-up">Cursos</h2>
+    <div class="cursos-caixa">
+
+      <div class="cursos-card" data-aos="flip-left">
+        <img src="gestão.jpeg" alt="Curso de Gestão" class="curso-imagem">
+        <div class="caixa-textos-cursos">
+          <h3 class="info-curso">Curso de Gestão</h3>
+          <p class="paragrafo-curso">
+            Coordenação de todas as atividades e recursos de uma empresa, com o objetivo de alcançar resultados eficientes e sustentáveis.
+          </p>
+        </div>
+      </div>
+
+      <div class="cursos-card" data-aos="flip-left" data-aos-delay="150">
+        <img src="administracao.webp" alt="Curso de Administração" class="curso-imagem">
+        <div class="caixa-textos-cursos">
+          <h3 class="info-curso">Curso de Administração</h3>
+          <p class="paragrafo-curso">
+            Gestão de recursos para atingir objetivos organizacionais. Inclui planejamento, organização, direção e controle.
+          </p>
+        </div>
+      </div>
+
+      <div class="cursos-card" data-aos="flip-left" data-aos-delay="300">
+        <img src="conhecimentos-de-informatica-1.jpeg" alt="Curso de Informática" class="curso-imagem">
+        <div class="caixa-textos-cursos">
+          <h3 class="info-curso">Curso de Informática</h3>
+          <p class="paragrafo-curso">
+            Conceitos básicos de hardware, software, redes, internet e ferramentas de produtividade.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="contato">
+    <h2 class="contato-titulo" data-aos="fade-up">Contato</h2>
+    <form class="formulario-contato" id="formulario" data-aos="fade-up" data-aos-delay="200">
+      <input name="nome" placeholder="Nome" class="campo-form" aria-label="Nome">
+      <textarea name="mensagem" class="text-form" placeholder="Digite a sua mensagem" aria-label="Mensagem"></textarea>
+    </form>
+  </section>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <!-- tsParticles Config -->
+  <script>
+    tsParticles.load("tsparticles", {
+      background: {
+        color: "#10082f"
+      },
+      particles: {
+        color: { value: "#7c3aed" },
+        links: {
+          enable: true,
+          color: "#4f46e5",
+          distance: 150
+        },
+        move: {
+          enable: true,
+          speed: 1.5
+        },
+        size: {
+          value: { min: 1, max: 4 }
+        },
+        number: {
+          value: 100
+        }
+      },
+      interactivity: {
+        events: {
+          onHover: { enable: true, mode: "repulse" },
+          onClick: { enable: true, mode: "push" }
+        },
+        modes: {
+          repulse: { distance: 100 },
+          push: { quantity: 4 }
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>
